@@ -43,6 +43,6 @@ print(print_tuple(t))  # Prints 1 2 5 7 99, one per line
 u = [(1,), ()]
 q = tuple(('1'))
 # Declare a tuple of 1 element then print it
-# u = (1)  # What needs to be added to make this work?
-print(print_tuple(u))
-print(print_tuple(q))
+# u = (1)# What needs to be added to make this work?
+u = (1,)
+print_tuple(u)

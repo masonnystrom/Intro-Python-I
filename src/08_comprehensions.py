@@ -10,10 +10,13 @@ for more info regarding list comprehensions.
 
 # Write a list comprehension to produce the array [1, 2, 3, 4, 5]
 
-y = []
-for num in range(5):
-    y.append(num)
-print (y)
+y = [num for num in range(1,6)]
+# for num in range(5):
+#     y.append(num)
+# print (y)
+
+print(y)
+
 
 # Write a list comprehension to produce the cubes of the numbers 0-9:
 # [0, 1, 8, 27, 64, 125, 216, 343, 512, 729]
@@ -23,15 +26,20 @@ for num in range(0,9):
     y2.append(num **2)
 print(y2)
 
+y2 = [num**3 for num in range(10)]
+print(y2)
+
 # Write a list comprehension to produce the uppercase version of all the
 # elements in array a. Hint: "foo".upper() is "FOO".
 y3 = []
 a = ["foo", "bar", "baz"]
 
-for string in a:
-    y3.append(string.upper())
+# for string in a:
+#     y3.append(string.upper())
 
 print(y3)
+
+y3 = [string.upper() for string in a]
 
 # Use a list comprehension to create a list containing only the _even_ elements
 # the user entered into list x.
@@ -39,8 +47,13 @@ x_even = []
 x = input("Enter comma-separated numbers: ").split(',')
 print(x)
 
-for num in x:
-    num = int(num)
-    if num % 2 == 0:
-        x_even.append(num)
-print(x_even)
+# for num in x:
+#     num = int(num)
+#     if num % 2 == 0:
+#         x_even.append(num)
+# print(x_even)
+
+xeven = [num for num in x if int(x) % 2 == 0]
+print(xeven)
+
+# what split return and how to manipulate it

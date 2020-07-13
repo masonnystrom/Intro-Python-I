@@ -1,25 +1,25 @@
-mylist = []
+# mylist = []
 
-mylist.append(1)
-mylist.append(2)
-print(mylist)
+# mylist.append(1)
+# mylist.append(2)
+# print(mylist)
 
-for x in mylist:
-    print(x)
+# for x in mylist:
+#     print(x)
 
-# accesing an index which does not exist
-# #generates an exception/error
+# # accesing an index which does not exist
+# # #generates an exception/error
 
-mylist = [1,2,3]
-#print(mylist[10])
+# mylist = [1,2,3]
+# #print(mylist[10])
 
-numbers = []
-strings = []
-names = ['John', 'James', 'Kat']
+# numbers = []
+# strings = []
+# names = ['John', 'James', 'Kat']
 
-names.append('Mason')
-print(names)
-print(names[3])
+# names.append('Mason')
+# print(names)
+# print(names[3])
 
 # For the exercise, look up the methods and functions that are available for use
 # with Python lists.
@@ -34,16 +34,16 @@ x.append(4)
 print(x)
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
-x = x + y
+x.extend(y)
 print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 10]
-x.remove(x[4])
+x.remove(4)
+# del x[4]
 print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]
-x.append(99)
-x.append(10)
+x.insert(5, 99)
 print(x)
 
 # Print the length of list x

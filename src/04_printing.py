@@ -12,6 +12,11 @@ z = "I like turtles!"
 # y, and z:
 # x is 10, y is 2.25, z is "I like turtles!"
 
-print(f'x is {x}, y is {y}, z is "I like turtles"')
+# operator
+print("x is %2d, y is %0.2f, z is %s."% (x, y, z))
 
-print("x is %d, y is %d, z is %s."% (x, y, z))
+# fstring
+print(f'x is {x}, y is {y:0.2f}, z is {z}')
+
+# format string
+print('x is {}, y is {:.2f}, z is {}'.format(x, y ,z))
