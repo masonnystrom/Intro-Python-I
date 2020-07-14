@@ -1,3 +1,6 @@
+#__repr__ - goal is to be unambigous(debugging)
+# __str__ - goal is to be readable (user output)
+
 # Make a class LatLon that can be passed parameters `lat` and `lon` to the
 # constructor
 
@@ -20,13 +23,13 @@ class Waypoint(LatLon):
 # `size`, `lat`, and `lon` to the constructor. What should it inherit from?
 
 class Geocache(Waypoint):
-    def __init__(self, difficulty, size, name, lat, lon):
+    def __init__(self, name, difficulty, size, lat, lon):
         self.difficulty = difficulty
         self.size = size
         super().__init__(name, lat, lon)
     def __str__(self):
         wpstr = super().__str__()
-        diffsize_str = f"\ndifficulty = {self.difficulty}, \nsize = {self.size}"
+        diffsize_str = f"\ndifficulty = {self.difficulty} \nsize = {self.size}"
         return wpstr + diffsize_str
 
 # Make a new waypoint and print it out: "Catacombs", 41.70505, -121.51521

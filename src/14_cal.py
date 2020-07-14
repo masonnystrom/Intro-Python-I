@@ -31,8 +31,23 @@ import sys
 import calendar
 from datetime import datetime
 
-def calendar(*args, datetime =)
+def create_calendar():
+  """ Creates a calendar for the selected year and month"""
+  while True:
+    try:
+      calendar.setfirstweekday(calendar.SUNDAY)
+      today = datetime.today()
+      year = int(input("What is the year (yyyy) you are looking for or press Enter for current year") or today.year)
+      month = int(input("What is the month (mm) you are looking for or press Enter for current month") or today.month)
+      print(calendar.month(year, month))
+    except ValueError:
+      print("Please use integers and not letters for the date")
+      break
+    else:
+      print(f"The calendar is for {month}/{year}")
+      break
 
+create_calendar()
 
 
 
