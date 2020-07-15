@@ -13,13 +13,12 @@ print(f1(1, 2))
 # Note: Google for "python arbitrary arguments" and look for "*args"
 
 #another way
-def f2a(*args):
-    """This funciton has an arbitrary numbers of args"""
-    # return sum(int(num) for num in args)
-    try:
-        return sum(int(i) for i in args)
-    except: ValueError
-    print("String is not Numeric")
+# def f2a(*args):
+#     """This funciton has an arbitrary numbers of args"""
+#     try:
+#         return sum(int(i) for i in args)
+#     except: ValueError
+#     print("String is not Numeric")
 
 def f2(*args):
     return sum(args)
@@ -32,11 +31,6 @@ print(f2(7, 9, 1, 3, 4, 9, 0))  # Should print 33
 a = [7, 6, 5, 4]
 
 # How do you have to modify the f2 call below to make this work?
-# def f2b(*args):
-#     sum = 0
-#     for i in range(0, len(args)):
-#         sum = sum + args[i]
-#     return sum
 
 print(f2(*a))    # Should print 22
 
@@ -45,19 +39,6 @@ print(f2(*a))    # Should print 22
 # arguments.
 # Note: Google "python default arguments" for a hint.
 
-# def f3a(*args):
-#     total = 0
-#     total1 = 0
-#     if len(args) == 1:
-#         for i in args:
-#             total += (i + 1)
-#         return total
-#     if len(args) > 1:
-#         for i in args:
-#             total1 += i
-#             return total1
-
-# simpler way
 def f3(x, y=1):
     return x + y
 
